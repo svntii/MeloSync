@@ -11,6 +11,9 @@
 		850347D42B33730300C853F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850347D32B33730300C853F5 /* ContentView.swift */; };
 		850347D62B33730500C853F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850347D52B33730500C853F5 /* Assets.xcassets */; };
 		850347DA2B33730500C853F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850347D92B33730500C853F5 /* Preview Assets.xcassets */; };
+		850347F02B3373F300C853F5 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850347EF2B3373F300C853F5 /* ExploreView.swift */; };
+		850347F52B33792C00C853F5 /* SearchFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850347F42B33792C00C853F5 /* SearchFilterBar.swift */; };
+		856DCE1B2B337CF100772D47 /* PlaylistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE1A2B337CF100772D47 /* PlaylistItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		850347D52B33730500C853F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		850347D72B33730500C853F5 /* MeloSync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeloSync.entitlements; sourceTree = "<group>"; };
 		850347D92B33730500C853F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		850347EF2B3373F300C853F5 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		850347F42B33792C00C853F5 /* SearchFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterBar.swift; sourceTree = "<group>"; };
+		856DCE1A2B337CF100772D47 /* PlaylistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,11 @@
 		850347D02B33730300C853F5 /* MeloSync */ = {
 			isa = PBXGroup;
 			children = (
-				850347D12B33730300C853F5 /* MeloSyncApp.swift */,
+				850347E42B33731D00C853F5 /* App */,
+				850347E52B33734400C853F5 /* Core */,
+				850347E82B33735300C853F5 /* Extensions */,
+				850347E92B33735700C853F5 /* Models */,
+				850347E72B33734A00C853F5 /* Utils */,
 				850347D32B33730300C853F5 /* ContentView.swift */,
 				850347D52B33730500C853F5 /* Assets.xcassets */,
 				850347D72B33730500C853F5 /* MeloSync.entitlements */,
@@ -67,6 +77,85 @@
 				850347D92B33730500C853F5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		850347E42B33731D00C853F5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				850347D12B33730300C853F5 /* MeloSyncApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		850347E52B33734400C853F5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				850347EE2B3373E200C853F5 /* Explore */,
+				850347F12B33757D00C853F5 /* Playlists */,
+				850347EB2B33739F00C853F5 /* Profile */,
+				850347EC2B3373A600C853F5 /* Root */,
+				850347ED2B3373B400C853F5 /* TabBar */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		850347E72B33734A00C853F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		850347E82B33735300C853F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		850347E92B33735700C853F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		850347EB2B33739F00C853F5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		850347EC2B3373A600C853F5 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		850347ED2B3373B400C853F5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		850347EE2B3373E200C853F5 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				850347EF2B3373F300C853F5 /* ExploreView.swift */,
+				850347F42B33792C00C853F5 /* SearchFilterBar.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		850347F12B33757D00C853F5 /* Playlists */ = {
+			isa = PBXGroup;
+			children = (
+				856DCE1A2B337CF100772D47 /* PlaylistItemView.swift */,
+			);
+			path = Playlists;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				850347D42B33730300C853F5 /* ContentView.swift in Sources */,
+				850347F02B3373F300C853F5 /* ExploreView.swift in Sources */,
+				850347F52B33792C00C853F5 /* SearchFilterBar.swift in Sources */,
+				856DCE1B2B337CF100772D47 /* PlaylistItemView.swift in Sources */,
 				850347D22B33730300C853F5 /* MeloSyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
