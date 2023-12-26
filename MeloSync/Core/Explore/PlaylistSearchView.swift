@@ -22,21 +22,37 @@ struct PlaylistSearchView: View {
     @State private var song = ""
     @State private var user = ""
     @State private var selectedOption: PlaylistSearchOptions = PlaylistSearchOptions.Song
-    @State private var genre = ""
-    @State private var mood = ""
+    @State private var genre: Genre = .random
+    @State private var mood: Moods = .random
+    
     
     var body: some View {
         VStack {
-            
-            Button(action: {
-                withAnimation(.snappy) {
-                    show.toggle()
+            HStack {
+                Button(action: {
+                    withAnimation(.snappy) {
+                        show.toggle()
+                    }
+                }, label: {
+                    Image(systemName: "xmark.circle")
+                        .imageScale(.large)
+                        .foregroundStyle(.black)
+                })
+                Spacer()
+                if !playlists.isEmpty || !song.isEmpty || !user.isEmpty || genre != .random || mood != .random {
+                    Button("Clear"){
+                        playlists = ""
+                        song = ""
+                        user = ""
+                        genre = .random
+                        mood = .random
+                    }
+                    .foregroundColor(.black)
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
                 }
-            }, label: {
-                Image(systemName: "xmark.circle")
-                    .imageScale(.large)
-                    .foregroundStyle(.black)
-            })
+            }
+            .padding()
             
             // Song Search
             VStack {
@@ -44,7 +60,7 @@ struct PlaylistSearchView: View {
                     ExpandedSongView(songName: $song)
                     
                 } else {
-                    CollapsedPickerView(title: "Song Name", description: song)
+                    CollapsedPickerView(title: "What", description: song)
                         .onTapGesture {
                             withAnimation(.bouncy) {
                                 selectedOption = PlaylistSearchOptions.Song
@@ -53,7 +69,7 @@ struct PlaylistSearchView: View {
                 }
             }
             .padding()
-            .frame(height: selectedOption == .Song ? 100 : 64)
+            .frame(height: selectedOption == .Song ? 160 : 64)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
             .padding()
@@ -69,7 +85,7 @@ struct PlaylistSearchView: View {
                     ExpandedUserView(playlists: $playlists, userName: $user)
                     
                 } else {
-                    CollapsedPickerView(title: "User", description: "Add Dates")
+                    CollapsedPickerView(title: "Who", description: "\(playlists) by \(user)")
                         .onTapGesture {
                             withAnimation(.bouncy) {
                                 selectedOption = PlaylistSearchOptions.User
@@ -78,7 +94,7 @@ struct PlaylistSearchView: View {
                 }
             }
             .padding()
-            .frame(height: selectedOption == .User ? 120 : 64)
+            .frame(height: selectedOption == .User ? 160 : 64)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
             .padding()
@@ -91,19 +107,22 @@ struct PlaylistSearchView: View {
             // Mood Search
             VStack {
                 if selectedOption == PlaylistSearchOptions.Mood {
-                    ExpandedMoodView(mood: $mood)
+                    ExpandedMoodView(selectedMood: $mood)
                 } else {
-                    CollapsedPickerView(title: "Mood", description: mood)
+                    CollapsedPickerView(title: "Mood", description: mood.rawValue, titleColor: .white)
                         .onTapGesture {
                             withAnimation(.bouncy) {
                                 selectedOption = PlaylistSearchOptions.Mood
                             }
                         }
+                        
                 }
             }
+            .background(mood.color)
             .padding()
-            .frame(height: selectedOption == .Mood ? 120 : 64)
-            .background(.white)
+            .background(mood.color)
+            .frame(height: selectedOption == .Mood ? 160 : 64)
+            .background(mood.color)
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
             .padding()
             .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
@@ -111,12 +130,14 @@ struct PlaylistSearchView: View {
                 withAnimation(.snappy) {selectedOption = .Mood}
             }
             
+            
             // Genre Search
             VStack {
                 if selectedOption == PlaylistSearchOptions.Genre {
+                    ExpandedGenreView(selectedGenre: $genre)
                     
                 } else {
-                    CollapsedPickerView(title: "Genre", description: genre)
+                    CollapsedPickerView(title: "Genre", description: genre.rawValue)
                         .onTapGesture {
                             withAnimation(.bouncy) {
                                 selectedOption = PlaylistSearchOptions.Genre
@@ -125,7 +146,7 @@ struct PlaylistSearchView: View {
                 }
             }
             .padding()
-            .frame(height: selectedOption == .Genre ? 150 : 64)
+            .frame(height: selectedOption == .Genre ? 160 : 64)
             .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: 12.0))
             .padding()
@@ -133,9 +154,28 @@ struct PlaylistSearchView: View {
             .onTapGesture {
                 withAnimation(.snappy) {selectedOption = .Genre}
             }
-        
-    
+            
+            Spacer()
+        }        
+        .overlay(alignment: .bottom) {
+            VStack {
+                HStack {
+                    Button("Search") {
+                        // Add action when the button is tapped
+                        withAnimation(.snappy) {
+                            show.toggle()
+                        }
+                    }
+                    .foregroundStyle(.black)
+                    .frame(width: 140, height: 40)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                }
+                .padding(.horizontal, 32)
+                
+            }
+            .background(.white)
         }
+
     }
 }
 
@@ -147,12 +187,13 @@ struct CollapsedPickerView: View {
     
     let title: String
     let description: String
+    var titleColor: Color = .gray
     
     var body: some View {
         VStack {
             HStack {
                 Text(title)
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(titleColor)
                 Spacer()
                 Text(description)
             }
@@ -172,7 +213,7 @@ struct ExpandedSongView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
 
-                TextField("?", text: $songName)
+                TextField("......... ?", text: $songName)
                     .font(.title2)
                     .underline()
             }
@@ -193,7 +234,7 @@ struct ExpandedUserView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
                 
-                TextField("?", text: $playlists)
+                TextField("playlist name", text: $playlists)
                     .font(.title2)
                     .underline()
             }
@@ -202,8 +243,8 @@ struct ExpandedUserView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
             
-                TextField("...", text: $userName)
-                    .font(.subheadline)
+                TextField("user", text: $userName)
+                    .font(.title2)
                     .underline()
             }
             
@@ -211,20 +252,89 @@ struct ExpandedUserView: View {
     }
 }
 
+enum Moods: String, CaseIterable, Identifiable {
+    case random = "Random"
+    case happy = "Happy"
+    case chill = "Chill"
+    case feelz = "Feelz"
+    case studious = "Studious"
+    case jazzy = "Jazzy"
+    case grunge = "Grunge"
+    case alt = "Alt"
+    
+    var id: Moods { self }
+    
+    var color: Color {
+        switch self {
+            case .random: return .gray
+            case .happy: return .yellow
+            case .chill: return .blue
+            case .feelz: return .purple
+            case .studious: return .green
+            case .jazzy: return .orange
+            case .grunge: return .red
+            case .alt: return .pink
+        }
+    }
+}
+
+
+
 struct ExpandedMoodView: View {
-    
-    @Binding var mood: String
-    
+    @Binding var selectedMood: Moods
+
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Text("My mood is")
                     .font(.title2)
                     .fontWeight(.semibold)
-                TextField("...", text: $mood)
-                    .underline()
-                    .font(.title2)
                 
+                Picker("...", selection: $selectedMood) {
+                    ForEach(Moods.allCases.sorted { $0.rawValue < $1.rawValue }, id: \.self) { mood in
+                        Text(mood.rawValue)
+                    }
+                }
+                .pickerStyle(.wheel)
+            }
+        }
+    }
+}
+
+
+
+enum Genre: String, CaseIterable, Identifiable {
+    case random = "Random"
+    case pop = "Pop"
+    case rock = "Rock"
+    case hipHop = "Hip Hop"
+    case jazz = "Jazz"
+    case classical = "Classical"
+    case electronic = "Electronic"
+    case country = "Country"
+    case alternative = "Alternative"
+    case RB = "R&B"
+    
+    var id: Genre { self }
+}
+
+
+struct ExpandedGenreView: View {
+    @Binding var selectedGenre: Genre
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("The genre is")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                
+                Picker("...", selection: $selectedGenre) {
+                    ForEach(Genre.allCases.sorted { $0.rawValue < $1.rawValue }, id: \.self) { genre in
+                        Text(genre.rawValue)
+                    }
+                }
+                .pickerStyle(.wheel)
             }
         }
     }

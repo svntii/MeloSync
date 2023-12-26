@@ -11,7 +11,7 @@ import SwiftUI
 struct MeloSyncApp: App {
     var body: some Scene {
         WindowGroup {
-            ExploreView()
+            ContentView()
         }
     }
 }

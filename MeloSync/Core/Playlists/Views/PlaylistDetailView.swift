@@ -77,6 +77,7 @@ struct PlaylistDetailView: View {
            
             
         }
+        .toolbar(.hidden, for: .tabBar)
         .ignoresSafeArea()
         .padding(.bottom, 65)
         .overlay(alignment: .bottom) {
