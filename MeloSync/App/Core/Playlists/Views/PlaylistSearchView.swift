@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MusicKit
 
 enum PlaylistSearchOptions {
     case Mood
@@ -154,6 +155,9 @@ struct PlaylistSearchView: View {
             .onTapGesture {
                 withAnimation(.snappy) {selectedOption = .Genre}
             }
+            
+            Text("Status: \(MusicAuthorization.currentStatus.rawValue)")
+            
             
             Spacer()
         }        

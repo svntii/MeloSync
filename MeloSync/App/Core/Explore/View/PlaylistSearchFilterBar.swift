@@ -1,5 +1,5 @@
 //
-//  SearchFilterBar.swift
+//  PlaylistSearchFilterBar.swift
 //  MeloSync
 //
 //  Created by santiago on 12/20/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchFilterBar: View {
+struct PlaylistSearchFilterBar: View {
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
@@ -41,5 +41,5 @@ struct SearchFilterBar: View {
 }
 
 #Preview {
-    SearchFilterBar()
+    PlaylistSearchFilterBar()
 }

@@ -17,7 +17,7 @@ struct ExploreView: View {
                 PlaylistSearchView(show: $showPlaylistSearchView)
             } else {
                 VStack {
-                    SearchFilterBar()
+                    PlaylistSearchFilterBar()
                         .onTapGesture {
                             withAnimation(.snappy) {
                                 showPlaylistSearchView.toggle()

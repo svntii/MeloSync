@@ -15,4 +15,7 @@ struct User: Identifiable, Codable {
     
     var playlists: [Playlist]
     var reviews: [Review]
+    
+    
+    
 }

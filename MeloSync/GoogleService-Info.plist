@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyD5oTVBGPI6NV0-y_I3dtT41DC9qmb9JMU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>796936914983</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.svntii.MeloSync</string>
+	<key>PROJECT_ID</key>
+	<string>melosync-3f326</string>
+	<key>STORAGE_BUCKET</key>
+	<string>melosync-3f326.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:796936914983:ios:21043b0886158ce38c6602</string>
+</dict>
+</plist>
