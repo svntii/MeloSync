@@ -8,41 +8,48 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var isLoggingIn = false
+    
     var body: some View {
-        VStack {
-            // Profile Login View
-            VStack(alignment: .leading, spacing: 32) {
-                
+        NavigationStack {
+            VStack {
                 // Profile Login View
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Profile")
-                        .fontWeight(.semibold)
-                    .font(.largeTitle)
+                VStack(alignment: .leading, spacing: 32) {
                     
-                    Text("Log in to explore and share your musical pallete")
+                    // Profile Login View
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Profile")
+                            .fontWeight(.semibold)
+                        .font(.largeTitle)
+                        
+                        Text("Log in to explore and share your musical pallete")
+                    }
+                    
+                    LogInButton {
+                        isLoggingIn.toggle()
+                    }
+                    .navigationDestination(isPresented: $isLoggingIn) {
+                            LoginView()
+                    }
+
+                    NavigationLink {
+                        SignUpView()
+                    } label: {
+                        SignUpPromptView()
+                            .padding(.top, 0)
+                            .foregroundStyle(.black)
+                    }
                 }
                 
-                
-                LogInButton()
-                
-                HStack {
-                    Text("Don't have an account?")
-                    Text("Sign-up")
-                        .underline()
-                        .fontWeight(.semibold)
+                // Options View
+                VStack(spacing: 24) {
+                    ProfileOptionRowView(imageName: "Gear", title: "Settings")
+                    ProfileOptionRowView(imageName: "Gear", title: "Accessibility")                
                 }
-                .font(.caption)
-                
+                .padding(.vertical)
             }
-            
-            // Options View
-            VStack(spacing: 24) {
-                ProfileOptionRowView(imageName: "Gear", title: "Settings")
-                ProfileOptionRowView(imageName: "Gear", title: "Accessibility")                
-            }
-            .padding(.vertical)
+            .padding()
         }
-        .padding()
     }
 }
 
@@ -51,8 +58,13 @@ struct ProfileView: View {
 }
 
 struct LogInButton: View {
+    
+    var action: () -> Void
+    
     var body: some View {
-        Button(action: {}, label: {
+        Button(action: {
+           action()
+        }, label: {
             Text("Login")
                 .foregroundStyle(.white)
                 .font(.subheadline)
@@ -63,3 +75,5 @@ struct LogInButton: View {
         })
     }
 }
+
+

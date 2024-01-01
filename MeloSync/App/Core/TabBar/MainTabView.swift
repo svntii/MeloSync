@@ -14,7 +14,6 @@ struct MainTabView: View {
                 .tabItem { Label("Explore", systemImage: "magnifyingglass") }
             HomeView()
                 .tabItem { Label("Home", systemImage: "house.fill") }
-
             ProfileView()
                 .tabItem { Label("Explore", systemImage: "person") }
 
@@ -24,4 +23,5 @@ struct MainTabView: View {
 
 #Preview {
     MainTabView()
+        .environmentObject(AuthViewModel())
 }

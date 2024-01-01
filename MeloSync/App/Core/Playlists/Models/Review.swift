@@ -11,7 +11,7 @@ import Foundation
 
 struct Review: Codable {
     
-    let user: User
+    let user: MeloUser
     let score: Rating
     let description: String
     let playlist: Playlist

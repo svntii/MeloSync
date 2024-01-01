@@ -8,15 +8,14 @@
 import Foundation
 
 class DeveloperPreview {
-    var user1: User // Declare user1 as a property
-    var user2: User
+    var user1: MeloUser // Declare user1 as a property
+    var user2: MeloUser
     
     var playlists: [Playlist] = []
 
     init() {
-        self.user1 = User(id: NSUUID().uuidString, ownerName: "svntiiago", ownerImageUrl: "none", playlists: [], reviews: [])
-        self.user2 = User(id: NSUUID().uuidString, ownerName: "loomzy", ownerImageUrl: "none", playlists: [], reviews: [])
-
+        self.user1 = MeloUser(id: NSUUID().uuidString, userName:  "svntiiago", firstName: "Santi", lastName: "Rodriguez", profilePic: "None", phoneNumber: "0111", email: "Santiago@Gmail.com", playlists: [], reviews: [])
+        self.user2 = MeloUser(id: NSUUID().uuidString, userName:  "loomzy", firstName: "Xavi", lastName: "Rodriguez", profilePic: "None", phoneNumber: "02222", email: "Xavier@Gmail.com", playlists: [], reviews: [])
         // Add Playlist using user1
         
         let playlist1 = Playlist(

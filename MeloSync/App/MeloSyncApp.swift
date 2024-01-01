@@ -20,15 +20,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 
-
 @main
 struct MeloSyncApp: App {
-    
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var viewModel = AuthViewModel()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

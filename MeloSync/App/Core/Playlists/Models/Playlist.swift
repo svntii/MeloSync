@@ -13,7 +13,7 @@ struct Playlist: Identifiable, Codable {
     var playlistName: String
     let coverPhoto: URL
     var description: String
-    let owner: User
+    let owner: MeloUser
     var songs: [Song]
     var reviews: [Review]
     

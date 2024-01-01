@@ -12,7 +12,7 @@
 		850347D62B33730500C853F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850347D52B33730500C853F5 /* Assets.xcassets */; };
 		850347DA2B33730500C853F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850347D92B33730500C853F5 /* Preview Assets.xcassets */; };
 		850347F02B3373F300C853F5 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850347EF2B3373F300C853F5 /* ExploreView.swift */; };
-		850347F52B33792C00C853F5 /* SearchFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850347F42B33792C00C853F5 /* SearchFilterBar.swift */; };
+		850347F52B33792C00C853F5 /* PlaylistSearchFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850347F42B33792C00C853F5 /* PlaylistSearchFilterBar.swift */; };
 		856DCE1B2B337CF100772D47 /* PlaylistItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE1A2B337CF100772D47 /* PlaylistItemView.swift */; };
 		856DCE1D2B3390A100772D47 /* PlaylistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE1C2B3390A100772D47 /* PlaylistDetailView.swift */; };
 		856DCE202B33913700772D47 /* PlaylistCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE1F2B33913700772D47 /* PlaylistCarouselView.swift */; };
@@ -31,8 +31,24 @@
 		856DCE402B3A962400772D47 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE3F2B3A962400772D47 /* Album.swift */; };
 		856DCE422B3A968400772D47 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE412B3A968400772D47 /* Platform.swift */; };
 		856DCE442B3A972500772D47 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE432B3A972500772D47 /* Review.swift */; };
-		856DCE462B3A975300772D47 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE452B3A975300772D47 /* User.swift */; };
+		856DCE462B3A975300772D47 /* MeloUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE452B3A975300772D47 /* MeloUser.swift */; };
 		856DCE482B3A9ACA00772D47 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE472B3A9ACA00772D47 /* DeveloperPreview.swift */; };
+		85874A9D2B3EA73D00AE492E /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85874A9C2B3EA73D00AE492E /* LoginManager.swift */; };
+		85874A9F2B3EA7E300AE492E /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85874A9E2B3EA7E300AE492E /* Error.swift */; };
+		85874AA12B3EBA6000AE492E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85874AA02B3EBA6000AE492E /* GoogleService-Info.plist */; };
+		85874ABA2B4228B200AE492E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 85874AB92B4228B200AE492E /* FirebaseAuth */; };
+		85874ABD2B422AED00AE492E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85874ABC2B422AED00AE492E /* AuthViewModel.swift */; };
+		85874ABF2B42395D00AE492E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85874ABE2B42395D00AE492E /* LoginView.swift */; };
+		85874AC12B424ADD00AE492E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85874AC02B424ADD00AE492E /* SignUpView.swift */; };
+		85874AC32B42582A00AE492E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85874AC22B42582A00AE492E /* FirebaseFirestoreSwift */; };
+		85874AD12B42597C00AE492E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 85874AD02B42597C00AE492E /* FirebaseAuth */; };
+		85874AD52B42597C00AE492E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 85874AD42B42597C00AE492E /* FirebaseFirestoreSwift */; };
+		85AAC0BA2B425B3300481DBE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 85AAC0B92B425B3300481DBE /* FirebaseFirestore */; };
+		85AAC0BF2B42BC0D00481DBE /* SignUpPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAC0BE2B42BC0D00481DBE /* SignUpPromptView.swift */; };
+		85AAC0C12B42C21000481DBE /* AlreadyHaveAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AAC0C02B42C21000481DBE /* AlreadyHaveAccountView.swift */; };
+		85C403E32B3BDE7D00903C8D /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C403E22B3BDE7D00903C8D /* ExploreViewModel.swift */; };
+		85C403E52B3BDFB400903C8D /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C403E42B3BDFB400903C8D /* ExploreService.swift */; };
+		85C403E72B3BE36600903C8D /* Info_dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C403E62B3BE36600903C8D /* Info_dev.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +59,7 @@
 		850347D72B33730500C853F5 /* MeloSync.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeloSync.entitlements; sourceTree = "<group>"; };
 		850347D92B33730500C853F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		850347EF2B3373F300C853F5 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
-		850347F42B33792C00C853F5 /* SearchFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterBar.swift; sourceTree = "<group>"; };
+		850347F42B33792C00C853F5 /* PlaylistSearchFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSearchFilterBar.swift; sourceTree = "<group>"; };
 		856DCE1A2B337CF100772D47 /* PlaylistItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistItemView.swift; sourceTree = "<group>"; };
 		856DCE1C2B3390A100772D47 /* PlaylistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistDetailView.swift; sourceTree = "<group>"; };
 		856DCE1F2B33913700772D47 /* PlaylistCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistCarouselView.swift; sourceTree = "<group>"; };
@@ -62,8 +78,21 @@
 		856DCE3F2B3A962400772D47 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		856DCE412B3A968400772D47 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		856DCE432B3A972500772D47 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
-		856DCE452B3A975300772D47 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		856DCE452B3A975300772D47 /* MeloUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloUser.swift; sourceTree = "<group>"; };
 		856DCE472B3A9ACA00772D47 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
+		85874A9C2B3EA73D00AE492E /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		85874A9E2B3EA7E300AE492E /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		85874AA02B3EBA6000AE492E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		85874AAD2B400D5100AE492E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		85874ABC2B422AED00AE492E /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		85874ABE2B42395D00AE492E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		85874AC02B424ADD00AE492E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		85AAC0BB2B42AFA100481DBE /* env.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = env.xcconfig; sourceTree = "<group>"; };
+		85AAC0BE2B42BC0D00481DBE /* SignUpPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPromptView.swift; sourceTree = "<group>"; };
+		85AAC0C02B42C21000481DBE /* AlreadyHaveAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyHaveAccountView.swift; sourceTree = "<group>"; };
+		85C403E22B3BDE7D00903C8D /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		85C403E42B3BDFB400903C8D /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
+		85C403E62B3BE36600903C8D /* Info_dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_dev.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +100,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85874ABA2B4228B200AE492E /* FirebaseAuth in Frameworks */,
+				85874AC32B42582A00AE492E /* FirebaseFirestoreSwift in Frameworks */,
+				85874AD12B42597C00AE492E /* FirebaseAuth in Frameworks */,
+				85AAC0BA2B425B3300481DBE /* FirebaseFirestore in Frameworks */,
+				85874AD52B42597C00AE492E /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +116,7 @@
 			children = (
 				850347D02B33730300C853F5 /* MeloSync */,
 				850347CF2B33730300C853F5 /* Products */,
+				85874AB82B4228B200AE492E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,15 +131,13 @@
 		850347D02B33730300C853F5 /* MeloSync */ = {
 			isa = PBXGroup;
 			children = (
+				85874AAD2B400D5100AE492E /* Info.plist */,
 				850347E42B33731D00C853F5 /* App */,
 				850347D52B33730500C853F5 /* Assets.xcassets */,
-				850347D32B33730300C853F5 /* ContentView.swift */,
-				850347E52B33734400C853F5 /* Core */,
-				850347E82B33735300C853F5 /* Extensions */,
 				850347D72B33730500C853F5 /* MeloSync.entitlements */,
-				850347E92B33735700C853F5 /* Models */,
-				850347D82B33730500C853F5 /* Preview Content */,
-				850347E72B33734A00C853F5 /* Utils */,
+				85874AA02B3EBA6000AE492E /* GoogleService-Info.plist */,
+				85C403E62B3BE36600903C8D /* Info_dev.plist */,
+				85AAC0BB2B42AFA100481DBE /* env.xcconfig */,
 			);
 			path = MeloSync;
 			sourceTree = "<group>";
@@ -121,6 +154,12 @@
 			isa = PBXGroup;
 			children = (
 				850347D12B33730300C853F5 /* MeloSyncApp.swift */,
+				850347D32B33730300C853F5 /* ContentView.swift */,
+				850347E52B33734400C853F5 /* Core */,
+				850347E82B33735300C853F5 /* Extensions */,
+				850347E92B33735700C853F5 /* Models */,
+				850347D82B33730500C853F5 /* Preview Content */,
+				850347E72B33734A00C853F5 /* Utils */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -128,6 +167,7 @@
 		850347E52B33734400C853F5 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				85874AAE2B400F2D00AE492E /* Authentication */,
 				856DCE322B38B82F00772D47 /* Home */,
 				856DCE1E2B33911A00772D47 /* Components */,
 				850347EE2B3373E200C853F5 /* Explore */,
@@ -152,6 +192,8 @@
 			children = (
 				856DCE252B34E7D900772D47 /* SongSwipeAction.swift */,
 				856DCE472B3A9ACA00772D47 /* DeveloperPreview.swift */,
+				85874A9C2B3EA73D00AE492E /* LoginManager.swift */,
+				85874A9E2B3EA7E300AE492E /* Error.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				856DCE412B3A968400772D47 /* Platform.swift */,
-				856DCE452B3A975300772D47 /* User.swift */,
+				856DCE452B3A975300772D47 /* MeloUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,9 +234,9 @@
 		850347EE2B3373E200C853F5 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				850347EF2B3373F300C853F5 /* ExploreView.swift */,
-				850347F42B33792C00C853F5 /* SearchFilterBar.swift */,
-				856DCE2C2B381A1200772D47 /* PlaylistSearchView.swift */,
+				85C403E02B3BDE3700903C8D /* Service */,
+				85C403E12B3BDE3D00903C8D /* View */,
+				85C403DE2B3BDE2800903C8D /* ViewModels */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -213,6 +255,8 @@
 			children = (
 				856DCE1F2B33913700772D47 /* PlaylistCarouselView.swift */,
 				856DCE212B33928200772D47 /* PlaylistInfoView.swift */,
+				85AAC0BE2B42BC0D00481DBE /* SignUpPromptView.swift */,
+				85AAC0C02B42C21000481DBE /* AlreadyHaveAccountView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -246,6 +290,7 @@
 		856DCE382B3A93DC00772D47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				856DCE2C2B381A1200772D47 /* PlaylistSearchView.swift */,
 				856DCE1A2B337CF100772D47 /* PlaylistItemView.swift */,
 				856DCE2A2B37B7A600772D47 /* SavePlaylistButton.swift */,
 				856DCE1C2B3390A100772D47 /* PlaylistDetailView.swift */,
@@ -271,6 +316,72 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		85874AAE2B400F2D00AE492E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				85874ABB2B422ADF00AE492E /* Model */,
+				85874AB12B400F4B00AE492E /* Service */,
+				85874AAF2B400F3900AE492E /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		85874AAF2B400F3900AE492E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				85874ABE2B42395D00AE492E /* LoginView.swift */,
+				85874AC02B424ADD00AE492E /* SignUpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		85874AB12B400F4B00AE492E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		85874AB82B4228B200AE492E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85874ABB2B422ADF00AE492E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85874ABC2B422AED00AE492E /* AuthViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85C403DE2B3BDE2800903C8D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				85C403E22B3BDE7D00903C8D /* ExploreViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		85C403E02B3BDE3700903C8D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				85C403E42B3BDFB400903C8D /* ExploreService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		85C403E12B3BDE3D00903C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				850347EF2B3373F300C853F5 /* ExploreView.swift */,
+				850347F42B33792C00C853F5 /* PlaylistSearchFilterBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,6 +398,13 @@
 			dependencies = (
 			);
 			name = MeloSync;
+			packageProductDependencies = (
+				85874AB92B4228B200AE492E /* FirebaseAuth */,
+				85874AC22B42582A00AE492E /* FirebaseFirestoreSwift */,
+				85874AD02B42597C00AE492E /* FirebaseAuth */,
+				85874AD42B42597C00AE492E /* FirebaseFirestoreSwift */,
+				85AAC0B92B425B3300481DBE /* FirebaseFirestore */,
+			);
 			productName = MeloSync;
 			productReference = 850347CE2B33730300C853F5 /* MeloSync.app */;
 			productType = "com.apple.product-type.application";
@@ -299,7 +417,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					850347CD2B33730300C853F5 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -315,6 +433,9 @@
 				Base,
 			);
 			mainGroup = 850347C52B33730300C853F5;
+			packageReferences = (
+				85874AA22B3EBBBE00AE492E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 850347CF2B33730300C853F5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,7 +451,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				850347DA2B33730500C853F5 /* Preview Assets.xcassets in Resources */,
+				85874AA12B3EBA6000AE492E /* GoogleService-Info.plist in Resources */,
 				850347D62B33730500C853F5 /* Assets.xcassets in Resources */,
+				85C403E72B3BE36600903C8D /* Info_dev.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,26 +468,35 @@
 				850347D42B33730300C853F5 /* ContentView.swift in Sources */,
 				856DCE2D2B381A1200772D47 /* PlaylistSearchView.swift in Sources */,
 				850347F02B3373F300C853F5 /* ExploreView.swift in Sources */,
+				85AAC0BF2B42BC0D00481DBE /* SignUpPromptView.swift in Sources */,
 				856DCE222B33928200772D47 /* PlaylistInfoView.swift in Sources */,
+				85874A9D2B3EA73D00AE492E /* LoginManager.swift in Sources */,
 				856DCE202B33913700772D47 /* PlaylistCarouselView.swift in Sources */,
-				850347F52B33792C00C853F5 /* SearchFilterBar.swift in Sources */,
+				850347F52B33792C00C853F5 /* PlaylistSearchFilterBar.swift in Sources */,
+				85C403E52B3BDFB400903C8D /* ExploreService.swift in Sources */,
 				856DCE292B37AA6400772D47 /* SongOptionsView.swift in Sources */,
 				856DCE312B38B6CD00772D47 /* ProfileOptionRowView.swift in Sources */,
 				856DCE3E2B3A94D300772D47 /* Songs.swift in Sources */,
+				85874A9F2B3EA7E300AE492E /* Error.swift in Sources */,
 				856DCE1D2B3390A100772D47 /* PlaylistDetailView.swift in Sources */,
 				856DCE362B38B98D00772D47 /* MainTabView.swift in Sources */,
 				856DCE242B33980300772D47 /* SongInfoView.swift in Sources */,
+				85874AC12B424ADD00AE492E /* SignUpView.swift in Sources */,
 				856DCE3A2B3A93F800772D47 /* Playlist.swift in Sources */,
 				856DCE2B2B37B7A600772D47 /* SavePlaylistButton.swift in Sources */,
 				856DCE262B34E7D900772D47 /* SongSwipeAction.swift in Sources */,
 				856DCE442B3A972500772D47 /* Review.swift in Sources */,
 				856DCE482B3A9ACA00772D47 /* DeveloperPreview.swift in Sources */,
+				85AAC0C12B42C21000481DBE /* AlreadyHaveAccountView.swift in Sources */,
 				856DCE1B2B337CF100772D47 /* PlaylistItemView.swift in Sources */,
 				856DCE342B38B84700772D47 /* HomeView.swift in Sources */,
 				856DCE2F2B38B50000772D47 /* ProfileView.swift in Sources */,
+				85874ABD2B422AED00AE492E /* AuthViewModel.swift in Sources */,
+				85C403E32B3BDE7D00903C8D /* ExploreViewModel.swift in Sources */,
 				850347D22B33730300C853F5 /* MeloSyncApp.swift in Sources */,
 				856DCE402B3A962400772D47 /* Album.swift in Sources */,
-				856DCE462B3A975300772D47 /* User.swift in Sources */,
+				85874ABF2B42395D00AE492E /* LoginView.swift in Sources */,
+				856DCE462B3A975300772D47 /* MeloUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +537,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -423,6 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Access playlist information, songs listened to, and search for songs";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -466,6 +600,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -478,6 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Access playlist information, songs listened to, and search for songs";
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -491,17 +627,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MeloSync/MeloSync.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MeloSync/Preview Content\"";
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = MN3HF6673T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeloSync/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -513,7 +656,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.svntii.MeloSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -527,17 +670,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MeloSync/MeloSync.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MeloSync/Preview Content\"";
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = MN3HF6673T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeloSync/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -549,7 +699,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.svntii.MeloSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -579,6 +729,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85874AA22B3EBBBE00AE492E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85874AB92B4228B200AE492E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85874AA22B3EBBBE00AE492E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		85874AC22B42582A00AE492E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85874AA22B3EBBBE00AE492E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		85874AD02B42597C00AE492E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseAuth;
+		};
+		85874AD42B42597C00AE492E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestoreSwift;
+		};
+		85AAC0B92B425B3300481DBE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85874AA22B3EBBBE00AE492E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 850347C62B33730300C853F5 /* Project object */;
 }
