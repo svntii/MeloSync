@@ -68,10 +68,6 @@ extension View {
 
 
 #Preview {
-    SongInfoView(
-        songName: "Example Song",
-        artist: "Artist Name",
-        album: "Album Name",
-        time: "3:45"
-    ).modifier(SongSwipeAction())
+    SongInfoView(song: .initAppleMusic(title: "Example Song", artistName: "Artist Name", albumTitle: "Artist Name", duration: 10, artwork: nil))
+        .modifier(SongSwipeAction())
 }

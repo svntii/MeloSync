@@ -8,56 +8,71 @@
 import SwiftUI
 
 struct SongInfoView: View {
-    let songName: String
-    let artist: String
-    let album: String
-    let time: String // Assuming time is a string for this example
+    
+    let song: MeloSong
+    
     
     @State private var swipeState = SwipeState()
     @State private var showOptions = false
 
-
+    let frame = 350
     
-    init(
-        songName: String = "Unknown Song",
-        artist: String = "Unknown Artist",
-        album: String = "Unknown Album",
-        time: String = "0:00"){
-            
-        self.songName = songName
-        self.artist = artist
-        self.album = album
-        self.time = time
+    init(song: MeloSong) {
+            self.song = song
     }
     
     
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "music.note.list")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .clipShape(Rectangle())
-                    .padding(.trailing, 4)
-                
-                VStack(alignment: .leading) {
-                    Text(songName)
+    
+                AsyncImage(url: song.appleMusicCoverArt?.url(width: frame, height: frame)) { phase in
+                    if let image = phase.image {
+                        image
+                            .resizable()
+                            .interpolation(.high)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 80, height: 80)
+                            .clipShape(Rectangle())
+                            .padding(.trailing, 4)
+                    } else if phase.error != nil {
+                        Image(systemName: "questionmark.diamond")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .clipShape(Rectangle())
+                            .padding(.trailing, 4)
+                    } else {
+                        ProgressView()
+                            .padding(.trailing, 4)
+                    }
+                }
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(song.songName)
                         .font(.headline)
+                        .lineLimit(1)
                     
-                    Text(album)
+                    Text(song.album ?? "Single")
                         .font(.subheadline)
+                        .lineLimit(1)
                     
-                    Text(artist)
-                        .font(.subheadline)
+                        Text(song.artist)
+                            .font(.subheadline)
+                            .lineLimit(1)
+                    HStack {
+                        Text(song.formatTrackTime())
+                            .font(.subheadline)
+    
+                        song.source.image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 20, height: 20)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
-                
-                Text(time)
-                    .font(.subheadline)
-                
+        
                 Button(action: {
                     self.showOptions.toggle()
                 }) {
@@ -66,20 +81,22 @@ struct SongInfoView: View {
                 .foregroundColor(.black)
             }
             .padding()
-            .background(Color.gray.opacity(0.1))
+            .background(song.source.color.opacity(0.1))
+            .overlay(
+                RoundedRectangle(cornerRadius: 0)
+                    .stroke(song.source.color, lineWidth: 0.5)
+            )
         }
         .sheet(isPresented: $showOptions, content: {
-            SongOptionsView()
+            SongOptionsView(song: song)
         })
     }
+
 }
 
 
 #Preview {
-    SongInfoView(
-        songName: "Example Song",
-        artist: "Artist Name",
-        album: "Album Name",
-        time: "3:45"
-    ).modifier(SongSwipeAction())
+    SongInfoView(song: .initAppleMusic(title: "Example Song Example SongExample Song", artistName: "Artist Name", albumTitle: "Artist Name", duration: 10, artwork: nil))
+        .modifier(SongSwipeAction())
+
 }

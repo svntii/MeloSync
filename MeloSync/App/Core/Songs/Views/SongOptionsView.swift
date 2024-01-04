@@ -8,12 +8,28 @@
 import SwiftUI
 
 struct SongOptionsView: View {
+    
+    let song: MeloSong
+    
     var body: some View {
         VStack(spacing: 0) {
-            Image(systemName: "lightbulb.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 225)
+            AsyncImage(url: song.appleMusicCoverArt?.url(width: 350, height: 350)) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .interpolation(.high)
+                        .aspectRatio(contentMode: .fill)
+                        .clipShape(Rectangle())
+                } else if phase.error != nil {
+                    Image(systemName: "questionmark.diamond")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .clipShape(Rectangle())
+                } else {
+                    ProgressView()
+                        .padding(.trailing, 4)
+                }
+            }
             
             
             VStack(alignment: .leading, spacing: 20) {
@@ -112,6 +128,6 @@ struct SongOptionsView: View {
     }
 }
 
-#Preview {
-    SongOptionsView()
-}
+//#Preview {
+//    SongOptionsView()
+//}

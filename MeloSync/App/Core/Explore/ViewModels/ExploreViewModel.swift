@@ -9,7 +9,7 @@ import Foundation
 
 
 class ExploreViewModel: ObservableObject {
-    @Published var playlists = [Playlist]()
+    @Published var playlists = [MeloPlaylist]()
     
     private let service: ExploreService
     

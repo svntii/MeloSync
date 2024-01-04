@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PlaylistSearchFilterBar: View {
+    
+    
+    
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")

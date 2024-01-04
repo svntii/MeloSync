@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Album: Codable {
+struct MeloAlbum: Codable {
     let albumCoverUrl: URL
     let artist: String
-    let songs: [Song]
+    let songs: [MeloSong]
 }

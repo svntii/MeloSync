@@ -17,8 +17,8 @@ struct MeloUser: Identifiable, Codable {
     let phoneNumber: String
     let email: String
     
-    var playlists: [Playlist]
-    var reviews: [Review]
+    var playlists: [MeloPlaylist]
+    var reviews: [MeloReview]
     
     
     

@@ -11,14 +11,14 @@ class DeveloperPreview {
     var user1: MeloUser // Declare user1 as a property
     var user2: MeloUser
     
-    var playlists: [Playlist] = []
+    var playlists: [MeloPlaylist] = []
 
     init() {
         self.user1 = MeloUser(id: NSUUID().uuidString, userName:  "svntiiago", firstName: "Santi", lastName: "Rodriguez", profilePic: "None", phoneNumber: "0111", email: "Santiago@Gmail.com", playlists: [], reviews: [])
         self.user2 = MeloUser(id: NSUUID().uuidString, userName:  "loomzy", firstName: "Xavi", lastName: "Rodriguez", profilePic: "None", phoneNumber: "02222", email: "Xavier@Gmail.com", playlists: [], reviews: [])
         // Add Playlist using user1
         
-        let playlist1 = Playlist(
+        let playlist1 = MeloPlaylist(
             id: NSUUID().uuidString,
             playlistName: "Vibez Cartel",
             coverPhoto: URL(string: "https://www.example.com")!,
@@ -28,7 +28,7 @@ class DeveloperPreview {
             reviews: []
         )
         
-        let playlist2 = Playlist(
+        let playlist2 = MeloPlaylist(
             id: NSUUID().uuidString,
             playlistName: "lonely-uzi",
             coverPhoto: URL(string: "https://www.example.com")!,

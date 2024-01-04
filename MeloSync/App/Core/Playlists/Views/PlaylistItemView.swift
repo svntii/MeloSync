@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct PlaylistItemView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+
+    
     var body: some View {
         VStack(spacing: 8) {
             // Cover Image
@@ -21,7 +25,7 @@ struct PlaylistItemView: View {
                 VStack(alignment: .leading) {
                     Text("Playlist Name")
                         .fontWeight(.semibold)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
                     Text("Made by Name")
                         .foregroundStyle(.gray)
                     Text("# of Songs")
@@ -42,4 +46,5 @@ struct PlaylistItemView: View {
 
 #Preview {
     PlaylistItemView()
+        .environment(\.colorScheme, .dark)
 }

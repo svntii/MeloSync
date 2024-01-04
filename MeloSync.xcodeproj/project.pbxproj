@@ -26,11 +26,11 @@
 		856DCE312B38B6CD00772D47 /* ProfileOptionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE302B38B6CD00772D47 /* ProfileOptionRowView.swift */; };
 		856DCE342B38B84700772D47 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE332B38B84700772D47 /* HomeView.swift */; };
 		856DCE362B38B98D00772D47 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE352B38B98D00772D47 /* MainTabView.swift */; };
-		856DCE3A2B3A93F800772D47 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE392B3A93F800772D47 /* Playlist.swift */; };
-		856DCE3E2B3A94D300772D47 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE3D2B3A94D300772D47 /* Songs.swift */; };
-		856DCE402B3A962400772D47 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE3F2B3A962400772D47 /* Album.swift */; };
-		856DCE422B3A968400772D47 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE412B3A968400772D47 /* Platform.swift */; };
-		856DCE442B3A972500772D47 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE432B3A972500772D47 /* Review.swift */; };
+		856DCE3A2B3A93F800772D47 /* MeloPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE392B3A93F800772D47 /* MeloPlaylist.swift */; };
+		856DCE3E2B3A94D300772D47 /* MeloSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE3D2B3A94D300772D47 /* MeloSong.swift */; };
+		856DCE402B3A962400772D47 /* MeloAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE3F2B3A962400772D47 /* MeloAlbum.swift */; };
+		856DCE422B3A968400772D47 /* MeloPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE412B3A968400772D47 /* MeloPlatform.swift */; };
+		856DCE442B3A972500772D47 /* MeloReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE432B3A972500772D47 /* MeloReview.swift */; };
 		856DCE462B3A975300772D47 /* MeloUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE452B3A975300772D47 /* MeloUser.swift */; };
 		856DCE482B3A9ACA00772D47 /* DeveloperPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856DCE472B3A9ACA00772D47 /* DeveloperPreview.swift */; };
 		85874A9D2B3EA73D00AE492E /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85874A9C2B3EA73D00AE492E /* LoginManager.swift */; };
@@ -49,6 +49,7 @@
 		85C403E32B3BDE7D00903C8D /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C403E22B3BDE7D00903C8D /* ExploreViewModel.swift */; };
 		85C403E52B3BDFB400903C8D /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C403E42B3BDFB400903C8D /* ExploreService.swift */; };
 		85C403E72B3BE36600903C8D /* Info_dev.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85C403E62B3BE36600903C8D /* Info_dev.plist */; };
+		85EED7542B469AF40032CFB3 /* SongSearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EED7532B469AF40032CFB3 /* SongSearchResultsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,11 +74,11 @@
 		856DCE302B38B6CD00772D47 /* ProfileOptionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRowView.swift; sourceTree = "<group>"; };
 		856DCE332B38B84700772D47 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		856DCE352B38B98D00772D47 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
-		856DCE392B3A93F800772D47 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
-		856DCE3D2B3A94D300772D47 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
-		856DCE3F2B3A962400772D47 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		856DCE412B3A968400772D47 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		856DCE432B3A972500772D47 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		856DCE392B3A93F800772D47 /* MeloPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloPlaylist.swift; sourceTree = "<group>"; };
+		856DCE3D2B3A94D300772D47 /* MeloSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloSong.swift; sourceTree = "<group>"; };
+		856DCE3F2B3A962400772D47 /* MeloAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloAlbum.swift; sourceTree = "<group>"; };
+		856DCE412B3A968400772D47 /* MeloPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloPlatform.swift; sourceTree = "<group>"; };
+		856DCE432B3A972500772D47 /* MeloReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloReview.swift; sourceTree = "<group>"; };
 		856DCE452B3A975300772D47 /* MeloUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeloUser.swift; sourceTree = "<group>"; };
 		856DCE472B3A9ACA00772D47 /* DeveloperPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperPreview.swift; sourceTree = "<group>"; };
 		85874A9C2B3EA73D00AE492E /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		85C403E22B3BDE7D00903C8D /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		85C403E42B3BDFB400903C8D /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
 		85C403E62B3BE36600903C8D /* Info_dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_dev.plist; sourceTree = "<group>"; };
+		85EED7532B469AF40032CFB3 /* SongSearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchResultsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +203,11 @@
 		850347E92B33735700C853F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				856DCE412B3A968400772D47 /* Platform.swift */,
+				856DCE392B3A93F800772D47 /* MeloPlaylist.swift */,
+				856DCE432B3A972500772D47 /* MeloReview.swift */,
+				856DCE3D2B3A94D300772D47 /* MeloSong.swift */,
+				856DCE3F2B3A962400772D47 /* MeloAlbum.swift */,
+				856DCE412B3A968400772D47 /* MeloPlatform.swift */,
 				856DCE452B3A975300772D47 /* MeloUser.swift */,
 			);
 			path = Models;
@@ -281,8 +287,6 @@
 		856DCE372B3A93D400772D47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				856DCE392B3A93F800772D47 /* Playlist.swift */,
-				856DCE432B3A972500772D47 /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,8 +305,6 @@
 		856DCE3B2B3A948D00772D47 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				856DCE3D2B3A94D300772D47 /* Songs.swift */,
-				856DCE3F2B3A962400772D47 /* Album.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				850347EF2B3373F300C853F5 /* ExploreView.swift */,
+				85EED7532B469AF40032CFB3 /* SongSearchResultsView.swift */,
 				850347F42B33792C00C853F5 /* PlaylistSearchFilterBar.swift */,
 			);
 			path = View;
@@ -464,7 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				856DCE422B3A968400772D47 /* Platform.swift in Sources */,
+				856DCE422B3A968400772D47 /* MeloPlatform.swift in Sources */,
 				850347D42B33730300C853F5 /* ContentView.swift in Sources */,
 				856DCE2D2B381A1200772D47 /* PlaylistSearchView.swift in Sources */,
 				850347F02B3373F300C853F5 /* ExploreView.swift in Sources */,
@@ -476,16 +479,17 @@
 				85C403E52B3BDFB400903C8D /* ExploreService.swift in Sources */,
 				856DCE292B37AA6400772D47 /* SongOptionsView.swift in Sources */,
 				856DCE312B38B6CD00772D47 /* ProfileOptionRowView.swift in Sources */,
-				856DCE3E2B3A94D300772D47 /* Songs.swift in Sources */,
+				856DCE3E2B3A94D300772D47 /* MeloSong.swift in Sources */,
 				85874A9F2B3EA7E300AE492E /* Error.swift in Sources */,
 				856DCE1D2B3390A100772D47 /* PlaylistDetailView.swift in Sources */,
 				856DCE362B38B98D00772D47 /* MainTabView.swift in Sources */,
+				85EED7542B469AF40032CFB3 /* SongSearchResultsView.swift in Sources */,
 				856DCE242B33980300772D47 /* SongInfoView.swift in Sources */,
 				85874AC12B424ADD00AE492E /* SignUpView.swift in Sources */,
-				856DCE3A2B3A93F800772D47 /* Playlist.swift in Sources */,
+				856DCE3A2B3A93F800772D47 /* MeloPlaylist.swift in Sources */,
 				856DCE2B2B37B7A600772D47 /* SavePlaylistButton.swift in Sources */,
 				856DCE262B34E7D900772D47 /* SongSwipeAction.swift in Sources */,
-				856DCE442B3A972500772D47 /* Review.swift in Sources */,
+				856DCE442B3A972500772D47 /* MeloReview.swift in Sources */,
 				856DCE482B3A9ACA00772D47 /* DeveloperPreview.swift in Sources */,
 				85AAC0C12B42C21000481DBE /* AlreadyHaveAccountView.swift in Sources */,
 				856DCE1B2B337CF100772D47 /* PlaylistItemView.swift in Sources */,
@@ -494,7 +498,7 @@
 				85874ABD2B422AED00AE492E /* AuthViewModel.swift in Sources */,
 				85C403E32B3BDE7D00903C8D /* ExploreViewModel.swift in Sources */,
 				850347D22B33730300C853F5 /* MeloSyncApp.swift in Sources */,
-				856DCE402B3A962400772D47 /* Album.swift in Sources */,
+				856DCE402B3A962400772D47 /* MeloAlbum.swift in Sources */,
 				85874ABF2B42395D00AE492E /* LoginView.swift in Sources */,
 				856DCE462B3A975300772D47 /* MeloUser.swift in Sources */,
 			);
@@ -627,7 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MeloSync/MeloSync.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -635,6 +639,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeloSync/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Access playlist information, songs listened to, and search for songs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -647,8 +653,8 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -656,8 +662,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.svntii.MeloSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -670,7 +679,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MeloSync/MeloSync.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -678,6 +687,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeloSync/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Access playlist information, songs listened to, and search for songs";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -690,8 +701,8 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -699,8 +710,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.svntii.MeloSync;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

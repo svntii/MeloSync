@@ -9,17 +9,17 @@ import Foundation
 
 
 
-struct Review: Codable {
+struct MeloReview: Codable {
     
     let user: MeloUser
-    let score: Rating
+    let score: MeloRating
     let description: String
-    let playlist: Playlist
+    let playlist: MeloPlaylist
     
     
     
     
-    enum Rating: Codable {
+    enum MeloRating: Codable {
         case one
         case two
         case three

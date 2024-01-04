@@ -17,6 +17,7 @@ enum PlaylistSearchOptions {
 }
 
 struct PlaylistSearchView: View {
+    @Environment(\.colorScheme) var colorScheme
     
     @Binding var show: Bool
     @State private var playlists = ""
@@ -30,6 +31,7 @@ struct PlaylistSearchView: View {
     var body: some View {
         VStack {
             HStack {
+                // X Button
                 Button(action: {
                     withAnimation(.snappy) {
                         show.toggle()
@@ -37,9 +39,12 @@ struct PlaylistSearchView: View {
                 }, label: {
                     Image(systemName: "xmark.circle")
                         .imageScale(.large)
-                        .foregroundStyle(.black)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
                 })
+                
                 Spacer()
+                
+                // Clear Button
                 if !playlists.isEmpty || !song.isEmpty || !user.isEmpty || genre != .random || mood != .random {
                     Button("Clear"){
                         playlists = ""
@@ -48,17 +53,20 @@ struct PlaylistSearchView: View {
                         genre = .random
                         mood = .random
                     }
-                    .foregroundColor(.black)
+                    .foregroundColor(colorScheme == .dark ? .white : .black)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 }
             }
             .padding()
+            .padding(.top, 30)
             
             // Song Search
             VStack {
                 if selectedOption == PlaylistSearchOptions.Song {
                     ExpandedSongView(songName: $song)
+                        .foregroundColor(colorScheme == .dark ? .black : .black)
+
                     
                 } else {
                     CollapsedPickerView(title: "What", description: song)
@@ -84,6 +92,8 @@ struct PlaylistSearchView: View {
             VStack {
                 if selectedOption == PlaylistSearchOptions.User {
                     ExpandedUserView(playlists: $playlists, userName: $user)
+                        .foregroundColor(colorScheme == .dark ? .black : .black)
+
                     
                 } else {
                     CollapsedPickerView(title: "Who", description: "\(playlists) by \(user)")
@@ -136,6 +146,8 @@ struct PlaylistSearchView: View {
             VStack {
                 if selectedOption == PlaylistSearchOptions.Genre {
                     ExpandedGenreView(selectedGenre: $genre)
+                        .foregroundColor(colorScheme == .dark ? .black : .black)
+
                     
                 } else {
                     CollapsedPickerView(title: "Genre", description: genre.rawValue)
@@ -155,36 +167,52 @@ struct PlaylistSearchView: View {
             .onTapGesture {
                 withAnimation(.snappy) {selectedOption = .Genre}
             }
-            
-            Text("Status: \(MusicAuthorization.currentStatus.rawValue)")
-            
-            
+                                    
             Spacer()
-        }        
+        }
+        .toolbar(.hidden, for: .tabBar)
+        .ignoresSafeArea()
         .overlay(alignment: .bottom) {
             VStack {
                 HStack {
-                    Button("Search") {
-                        // Add action when the button is tapped
-                        withAnimation(.snappy) {
-                            show.toggle()
-                        }
+                    NavigationLink(destination: resultsFlow()) {
+                        Text("Search")
+                            .foregroundStyle(colorScheme == .dark ? .white : .black)
+                            .frame(width: 140, height: 40)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
-                    .foregroundStyle(.black)
-                    .frame(width: 140, height: 40)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    
+                    
                 }
                 .padding(.horizontal, 32)
-                
             }
-            .background(.white)
+            .background(colorScheme == .dark ? .black : .white)
         }
 
     }
+    
+    func resultsFlow() -> some View {
+        switch selectedOption {
+            case .Mood:
+                return AnyView(EmptyView())
+            case .User:
+                return AnyView(EmptyView())
+            case .Genre:
+                return AnyView(EmptyView())
+            case .Song:
+            return AnyView(SongSearchResultsView(songName: $song))
+            case .Name:
+                return AnyView(EmptyView())
+        }
+    }
+
 }
 
 #Preview {
-    PlaylistSearchView(show: .constant(false))
+//    PlaylistSearchView(show: .constant(false))
+    MainTabView()
+        .environmentObject(AuthViewModel())
+        .environment(\.colorScheme, .dark)
 }
 
 struct CollapsedPickerView: View {
@@ -207,7 +235,6 @@ struct CollapsedPickerView: View {
 }
 
 struct ExpandedSongView: View {
-    
     @Binding var songName: String
     
     var body: some View {
@@ -217,9 +244,11 @@ struct ExpandedSongView: View {
                     .font(.title2)
                     .fontWeight(.semibold)
 
+
                 TextField("......... ?", text: $songName)
                     .font(.title2)
                     .underline()
+
             }
         }
     }

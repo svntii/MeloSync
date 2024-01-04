@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExploreView: View {
     
+    
     @State private var showPlaylistSearchView = false
     
     var body: some View {
@@ -46,4 +47,6 @@ struct ExploreView: View {
 
 #Preview {
     ExploreView()
+        .environmentObject(AuthViewModel())
+        .environment(\.colorScheme, .dark)
 }
